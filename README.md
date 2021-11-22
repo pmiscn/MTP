@@ -14,7 +14,9 @@ Delphi html mvc
 
 
 下面是几个例子；
+ 
 <pre>
+
 <#data origin="mudb" type="json" path="">
     {
     //这个如果有，就用，没有，就从配置文件
@@ -32,7 +34,8 @@ Delphi html mvc
     }
     }
 </#data>
-
+</pre>
+<pre>
 <table>
     <tr><th>id</th><th>userid</th><th>username</th><th>Department</th><th>office</th><th>addtime</th></tr>
     <#each range="" filter="@II%2==0" datapath="" loopvar="@II">
@@ -59,13 +62,14 @@ Delphi html mvc
 </table>
 <#>@</#>
 
-
+</pre>
+<pre>
 <#for range="0..4" datapath="Data" filter="@II%2==1" loopvar="@II">
     <#for range="0..2" datapath="" loopvar="@I" filter="@II==@I">
         <#> @I+1 </#><#>@[@I].Name</#>
     </#for>
 </#for>
- 
+ </pre>
 <ul><#each datapath="Data" range="0..1" loopvar="@I" filter="Sum(Number(@ID)+1)== 2"><li><#>@I+"："+@Name</#></li></#each></ul>
 <ul><#each datapath="Data" range="" loopvar="@I" filter='( (@ID >= "1") || (@ID== "2") )'><li><#>@Name</#></li></#each></ul>
 <ul><#each datapath="Data" range="0..2" loopvar="@I" filter="1=1"><li><#>@Name</#></li></#each></ul>
@@ -97,12 +101,9 @@ Delphi html mvc
         </#each>
     </ul>
     <ul><#each datapath="Data"><li><# @Name /></li> </#each></ul>
-</div>
-
-</pre>
+</div> 
 
 <#include path="header.htm" parse=true />
 <div class="bd">
 </div>
 <#include path="footer.htm" />
-
