@@ -3,7 +3,10 @@ Delphi html mvc
 
 基于QDAC的一个模版解析程序。
 
-需要应用qdac www.qdac.cc
+需要应用qdac www.qdac.cc 
+https://github.com/pmiscn/MuObjectPool
+https://github.com/pmiscn/FilePackage
+
 
 
 当时为了找一个类似php里面的模版解析，delphi下看了几个，感觉不是我想要的，就自己写了一个。
