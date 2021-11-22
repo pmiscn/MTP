@@ -1,0 +1,32 @@
+﻿<#data origin="mudb" type="dataset" path="">
+    {
+    //这个如果有，就用，没有，就从配置文件
+    Type:"mssql", //默认
+    Config:{
+    Server:{
+    },
+    SQL:"select top 50 userid,username ,Department,office,addtime from [dbo].[T_Users] where userid like :UID ",
+    Type:"sqljson"   // sql proc
+    },
+    //提交的值，不能是数组和对象
+    Values:{
+    UID:"0%"
+    // id:"$id",  //$是Url的 querystring 参数
+    }
+    }
+</#data>
+
+<table>
+    <tr><th>id</th><th>userid</th><th>username</th><th>Department</th><th>office</th><th>addtime</th></tr>
+    <#each range="" filter="@II%2==0" datapath="" loopvar="@II">
+        <tr class="<#if @II%2==0>row1</#if><#else>row2</#else>">
+        <td><#>(@II+1)</#></td>
+        <td><#>@userid+"："+@username</#></td>
+        <td><#>@username</#></td>
+        <td><#>@Department</#></td>
+        <td><#>@office</#></td>
+        <td><#>FormatDatetime("yyyy年MM月dd日",@addtime)</#></td>
+        </tr>
+    </#each>
+     
+</table>

@@ -1,0 +1,54 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul><#each datapath="Data"><li><#@Name></li></#each><#each datapath="Data"><li><#@Name></li></#each><#each datapath="Data"><li><#@Name></li></#each><#each datapath="Data"><li><#@Name></li></#each><#each datapath="Data"><li><#@Name></li></#each><#each datapath="Data"><li><#@Name></li></#each><#each datapath="Data"><li><#@Name></li></#each></ul>
+<div>
+    <ul>
+        <#each datapath="Data">
+            <li>
+                <#if @ID= ="1">
+                    <dl>
+                        <dt><# @ID+":"+@Name>:</dt>
+                        <#each datapath="Score">
+                            <dd><# @></dd>
+                        </#each>
+                    </dl>
+                    <#elseif @ID= ="2">
+                        <#@Name>
+                            <#elseif @ID= ="3">
+                                <#@ID>
+                                    <%else%>NONE
+                </#if>
+            </li>
+        </#each>
+    </ul>
+
+    <ul>
+        <#each datapath="Data">
+            <li><# @Name></li>
+        </#each>
+    </ul>
+
+</div>
+
+<#include path="header.htm" parse=false>
+    <div class="bd">
+
+
+
+    </div>
+    <#include path="footer.htm">
+
+        </body>
+        </html>

@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{8A478641-B9F9-4F9C-8B45-AAFA21FC7D31}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="TestParse.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\MTPPlugins\calendar\calendar.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="TestParse">
+        <MSBuild Projects="TestParse.dproj"/>
+    </Target>
+    <Target Name="TestParse:Clean">
+        <MSBuild Projects="TestParse.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TestParse:Make">
+        <MSBuild Projects="TestParse.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="calendar">
+        <MSBuild Projects="..\MTPPlugins\calendar\calendar.dproj"/>
+    </Target>
+    <Target Name="calendar:Clean">
+        <MSBuild Projects="..\MTPPlugins\calendar\calendar.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="calendar:Make">
+        <MSBuild Projects="..\MTPPlugins\calendar\calendar.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="TestParse;calendar"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="TestParse:Clean;calendar:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="TestParse:Make;calendar:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

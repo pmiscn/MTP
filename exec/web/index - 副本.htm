@@ -1,0 +1,60 @@
+﻿
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><%@Page.Title%></title>
+    <meta name="description" content="<%@Page.Description%>" />
+    <meta name="keywords" content="<%@Page.Keywords%>" />
+    <style type="text/css">
+        h1 {color: red;}         
+        .bd{width:100%;border:1px solid red; }
+    </style>
+</head>
+<body>  
+    <%=@(Data)%>  
+                               
+    <%fordo("_I","@(Data[_I])",1,Length("@Data"))%>
+
+    <%=Length("@@Data"))%>
+    <%=@("hello world")%>
+    <%=ifthen((@Data[0].ID==1),
+    foreachdo("@Data","<ul><li>@@ID</li><li>@@Name</li><li>@@Score</li></ul>"),
+    "@Data[0].Name")
+    %>
+
+    SubStr("abcdefg",1,2)=<%SubStr("abcdefg",1,2)%>
+    CharIndex("abcdefg","cd")=<%CharIndex("cd","abcdefg")%>
+
+    Replace("abcdefg","cd","CD")=<%Replace("abcdefg","cd","CD")%>
+    Remove("abcdefg",2,2)=<%Remove("abcdefg",2,2)%>
+    RemoveStr("abcdefg","c","e")=<%RemoveStr("abcdefg","c","e")%>
+    Insert("abcdefg",2,"123")=<%Insert("abcdefg",2,"123")%>
+
+    <%foreachdo("@Data[0].Score","<li>@@</li>")%>
+    <%="<ul>"+foreachdo("@Data[0].Score","<li>@@@</li>")+"</ul>"%>
+
+    <%foreachdo("@Data","<ul><li>@ID</li><li>@Name</li><li>@Score</li></ul>")%>
+    <%=ifthen((@Data[0].ID==1),
+        foreachdo("@Data","<ul><li>@ID</li><li>@Name</li><li>@Score</li></ul>"),
+        "@Data[0].Name")
+    %>
+
+    <%=
+    ("@Data[0].ID" + "@Data[0].Name")+  ";"+
+    ("@Data[0].ID" + "@Data[0].Name")
+    %>
+    <%="@Data[0].ID" + "@Data[0].Name" %>;<%=@("123","ABC","456")%>;<%=@("Data[0].ID",":","Data[0].Name")%>;<%=3+5*2%>   
+    <%="A"+"B"+IntToStr(30,Round(2.8),20)%>
+    <%="C"+"D"+IntToStr(4*Round(2.8))%><%=Int("3","4","5")%>
+
+    <%include("header.htm")%>
+    <div class="bd">
+
+                                           
+                   
+    </div>
+    <%include("footer.htm")%>              
+</body>
+
+</html>

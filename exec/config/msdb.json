@@ -1,0 +1,15 @@
+{      
+  	SaveType:"MSSQL",
+	Server:{
+	  Server:"192.168.254.162",
+	  Username:"sa",
+	  Password:"1234",
+	  Database:"DB"
+	},
+	SQL:"",
+	Type:"proc",
+	Exception:{
+	  Retry:1,
+	  Sleep:1
+	}
+}

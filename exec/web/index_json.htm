@@ -1,0 +1,69 @@
+﻿<#data origin="json" type="json">
+    {
+    Page:{
+    Title:"这是个测试页面",
+    Keywords:"测试页面关键字",
+    Description:"页面描述"
+    },
+    Data: [
+    {
+    "ID": "1",
+    "Name": "amu",
+    "Score": [ 80, 90, 100 ]
+    },
+    {
+    "ID": "2",
+    "Name": "amu2",
+    "Score": [ 70, 80, 90 ]
+    },
+    {
+    "ID": "3",
+    "Name": "amu3",
+    "Score": [ 60, 70, 80 ]
+    },
+    {
+    "ID": "4",
+    "Name": "amu4",
+    "Score": [ 50, 60, 70 ]
+    }
+    ],
+    Date:[
+    {date:"2020-01-01",Count:2000},
+    {date:"2020-01-02",Count:2000},
+    {date:"2020-01-03",Count:2000},
+    {date:"2020-01-04",Count:2000},
+    {date:"2020-01-05",Count:2000},
+    {date:"2020-01-06",Count:2000},
+    {date:"2020-01-07",Count:2000},
+    {date:"2020-01-08",Count:2000},
+    {date:"2020-01-09",Count:2000},
+    {date:"2020-01-10",Count:2000},
+    {date:"2020-01-11",Count:2000},
+    {date:"2020-01-12",Count:2000},
+    {date:"2020-01-13",Count:2000},
+    {date:"2020-01-14",Count:2000},
+    {date:"2020-01-15",Count:2000},
+    {date:"2020-01-16",Count:2000},
+    {date:"2020-01-17",Count:2000},
+    {date:"2020-01-18",Count:2000},
+    {date:"2020-01-19",Count:2000},
+    {date:"2020-01-20",Count:2000},
+    {date:"2020-01-21",Count:2000},
+    {date:"2020-01-22",Count:2000},
+    {date:"2020-01-23",Count:2000},
+    {date:"2020-01-24",Count:2000},
+    {date:"2020-01-25",Count:2000},
+    {date:"2020-01-26",Count:2000},
+    {date:"2020-01-27",Count:2000},
+    {date:"2020-01-28",Count:2000},
+    {date:"2020-01-29",Count:2000},
+    {date:"2020-01-30",Count:2000},
+    {date:"2020-01-31",Count:2000}
+    ]
+    }
+	
+	
+	
+</#data><#calendar year="2020" month="1" dateformat="yyyy-MM-dd" class="mm" monthclass="mn" emptydateclass="nn" dateclass="" datapath="Date" datefield="date">
+    <a href="/<#>@date</#>/" title="<#>@date</#>"><#> @date </#></a><br /><em><#>@Count</#></em>
+</#calendar>

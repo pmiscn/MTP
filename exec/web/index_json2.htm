@@ -1,0 +1,63 @@
+﻿
+<#data origin="json" type="json">
+    	[{"userid":"00000001","username":"test1","Department":"01","office":"工程师","addtime":"2017-03-30T10:05:07.053"},
+		{"userid":"00000002","username":"test2","Department":"0105","office":"工程师","addtime":"2017-03-30T10:05:06.930"},
+		{"userid":"00000004","username":"test4","Department":"0101","office":"工程师","addtime":"2017-04-24T21:38:39.173"},
+		{"userid":"06039500","username":"吴**","Department":"0108","office":"工程师","addtime":"2017-03-28T14:26:16.770"},
+		{"userid":"06152000","username":"綦**","Department":"010A","office":"工程师","addtime":"2017-03-28T14:19:31.190"},
+		{"userid":"06263410","username":"蔺**","Department":"0108","office":"工程师","addtime":"2017-03-28T14:26:15.617"},
+		{"userid":"08152000","username":"方*","Department":"0104","office":"工程师","addtime":"2017-03-28T14:19:33.853"},
+		{"userid":"10890010","username":"刘*","Department":"010C","office":"工程师","addtime":"2017-03-28T14:19:29.520"},
+		{"userid":"11137500","username":"于*","Department":"0108","office":"工程师","addtime":"2017-03-28T14:26:16.483"},
+		{"userid":"11621000","username":"鲍**","Department":"0109","office":"工程师","addtime":"2017-03-28T14:19:30.303"},
+		{"userid":"11731000","username":"李*","Department":"010G","office":"工程师","addtime":"2017-03-28T14:25:10.290"},
+		{"userid":"12345678","username":"as00","Department":"0102","office":"工程师","addtime":"2020-01-13T09:33:14.197"},
+		{"userid":"12506900","username":"尹**","Department":"0101","office":"工程师","addtime":"2017-03-28T14:19:38.790"},
+		{"userid":"14252000","username":"杨**","Department":"0101","office":"工程师","addtime":"2017-03-28T14:19:39.120"},
+		{"userid":"14320000","username":"张*","Department":"0104","office":"工程师","addtime":"2017-03-28T14:19:34.410"},
+		{"userid":"14954000","username":"何**","Department":"0107","office":"工程师","addtime":"2017-03-28T14:27:00.413"},
+		{"userid":"15737010","username":"朱*","Department":"0109","office":"工程师","addtime":"2017-03-28T14:19:29.747"},
+		{"userid":"16263410","username":"赵**","Department":"0103","office":"工程师","addtime":"2017-03-28T14:19:32.520"},
+		{"userid":"18267010","username":"魏*","Department":"0103","office":"工程师","addtime":"2017-03-28T14:19:33.300"},
+		{"userid":"18594000","username":"王*","Department":"0104","office":"工程师","addtime":"2017-03-28T14:19:33.967"},
+		{"userid":"19135900","username":"谭*","Department":"010G","office":"工程师","addtime":"2017-03-28T14:25:10.720"},
+		{"userid":"19240310","username":"邱*","Department":"0102","office":"工程师","addtime":"2017-03-28T14:19:26.743"},
+		{"userid":"19929500","username":"闫*","Department":"0108","office":"工程师","addtime":"2017-03-28T14:26:17.133"},
+		{"userid":"21021000","username":"赵*","Department":"010A","office":"工程师","addtime":"2017-03-28T14:19:31.413"},
+		{"userid":"22388110","username":"何**","Department":"0102","office":"工程师","addtime":"2017-03-28T14:19:25.630"},
+		{"userid":"22390310","username":"巩**","Department":"0103","office":"工程师","addtime":"2017-03-28T14:19:33.520"},
+		{"userid":"24983010","username":"吕**","Department":"0108","office":"工程师","addtime":"2017-03-28T14:26:15.760"},
+		{"userid":"25246010","username":"赵**","Department":"0101","office":"工程师","addtime":"2017-03-28T14:19:38.677"},
+		{"userid":"25267010","username":"王*","Department":"0108","office":"工程师","addtime":"2017-03-28T14:26:15.040"},
+		{"userid":"26111000","username":"王**","Department":"010A","office":"工程师","addtime":"2017-03-28T14:19:30.747"},
+		{"userid":"26912000","username":"宋*","Department":"010B","office":"工程师","addtime":"2017-03-28T14:19:27.963"},
+		{"userid":"2703601","username":"李**","Department":"0104","office":"工程师","addtime":"2017-03-28T14:19:34.077"},
+		{"userid":"29184410","username":"冯**","Department":"0102","office":"工程师","addtime":"2017-03-28T14:19:26.410"},
+		{"userid":"29435900","username":"姜**","Department":"0102","office":"工程师","addtime":"2017-03-28T14:19:27.520"},
+		{"userid":"30137500","username":"张*","Department":"0103","office":"工程师","addtime":"2017-03-28T14:19:33.077"},
+		{"userid":"30234210","username":"史**","Department":"010B","office":"工程师","addtime":"2017-03-28T14:19:27.740"},
+		{"userid":"31004800","username":"盛*","Department":"0108","office":"工程师","addtime":"2017-03-28T14:26:15.903"},
+		{"userid":"31021000","username":"曲**","Department":"010C","office":"工程师","addtime":"2017-03-28T14:19:29.190"},
+		{"userid":"31241079","username":"安*","Department":"0108","office":"工程师","addtime":"2017-03-28T14:26:17.277"},
+		{"userid":"32832010","username":"朱**","Department":"0103","office":"工程师","addtime":"2017-03-28T14:19:31.967"},
+		{"userid":"33418900","username":"董*","Department":"0101","office":"工程师","addtime":"2017-03-28T14:19:39.233"},
+		{"userid":"34954000","username":"郑*","Department":"0109","office":"工程师","addtime":"2017-03-28T14:19:29.630"}
+		]
+	
+</#data>
+ 
+<table> 
+<tr>
+<th>id</th><th>userid</th><th>username</th><th>Department</th><th>office</th><th>addtime</th>
+</tr>
+<#each range="" datapath="" loopvar="@II">
+   <tr>
+	   <td><#>(@II+1)</#></td>
+	   <td><#>@userid</#></td>
+	   <td><#>@username</#></td>
+	   <td><#>@Department</#></td>
+	   <td><#>@office</#></td>
+	   <td><#>@addtime</#></td> 
+   </tr>
+</#each>  
+</table>

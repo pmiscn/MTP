@@ -1,0 +1,53 @@
+﻿
+<#data type="mudbdataset">
+    { 
+    users:{
+        Type:"MSSQL",
+            Server:{
+                Server:"192.168.254.162",
+                Username:"amu",
+                Password:"mumumu",
+                Database:"DCCDB"
+            },
+            SQL:"CopyRight.dbo.P_ComSoft_Get_Response_2",
+            Type:"proc",
+            Exception:{
+                Retry:5,
+                Sleep:5
+            },
+            ParamesValues:{
+                @FNO :"$FNO" ,
+                @ResponseText:"$$ResponseText",
+                @ReturnCode :"$$ResponseCode",
+            }
+        }
+    }
+</#data>
+
+<div> 
+    <#dataset index="1" data="users" /> 
+    
+    <#dataset index="0" data="users">
+        <table>
+            <thead>
+                <tr>
+                    <#fields>
+                        <hd></hd>
+                    </#fields>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <#records> 
+                        <td></td>
+                    </#records>
+                </tr>
+            </tbody>
+            <tfoot>
+
+            </tfoot> 
+        </table>
+    </#dataset> 
+</div>
+
+

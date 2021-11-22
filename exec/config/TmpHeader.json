@@ -1,0 +1,28 @@
+{
+	EXStart : "<#",
+	EXEnd : ">",
+	EXEnd2 : "</#>",
+	EXEndL : "/>",
+	EXEndS : "</#",
+	
+	EXPrefix : "@",
+
+
+	EXEach : "each", 
+	
+	EXIf : "if",
+	EXElse : "else",
+	EXElseIf : "elseif", 
+	EXFor : "for",
+	
+	EXInclude : "include",
+	
+	EXData : "data", 
+
+	ExDataPath : "datapath",
+	ExFilePath : "path",
+	
+	ExRange : "range",
+	ExFilter : "filter",
+	ExLoopVar:"loopvar"
+}
