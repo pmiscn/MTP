@@ -14,7 +14,7 @@ Delphi html mvc
 
 
 下面是几个例子；
-
+<pre>
 <#data origin="mudb" type="json" path="">
     {
     //这个如果有，就用，没有，就从配置文件
@@ -98,6 +98,8 @@ Delphi html mvc
     </ul>
     <ul><#each datapath="Data"><li><# @Name /></li> </#each></ul>
 </div>
+
+</pre>
 
 <#include path="header.htm" parse=true />
 <div class="bd">
